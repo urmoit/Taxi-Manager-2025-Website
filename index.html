@@ -1,0 +1,220 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Taxi Manager 2025</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <style>
+      html {
+        scroll-behavior: smooth;
+      }
+
+      @keyframes fadeIn {
+        from { opacity: 0; }
+        to { opacity: 1; }
+      }
+
+      @keyframes fadeInUp {
+        from { opacity: 0; transform: translateY(32px); }
+        to { opacity: 1; transform: translateY(0); }
+      }
+
+      @keyframes gradientX {
+        0% { background-position: 0% 50%; }
+        100% { background-position: 100% 50%; }
+      }
+
+      .animate-fade-in { animation: fadeIn 1s both; }
+      .animate-fade-in-up { animation: fadeInUp 1s both; }
+      .animate-gradient-x {
+        background-size: 200% 200%;
+        animation: gradientX 4s ease-in-out infinite alternate;
+      }
+    </style>
+  </head>
+  <body class="bg-gray-950 text-white">
+    <div id="root"></div>
+
+    <!-- React and Babel -->
+    <script src="https://unpkg.com/react@18/umd/react.development.js" crossorigin></script>
+    <script src="https://unpkg.com/react-dom@18/umd/react-dom.development.js" crossorigin></script>
+    <script src="https://unpkg.com/@babel/standalone/babel.min.js"></script>
+
+    <script type="text/babel">
+      const { useState, useEffect } = React;
+
+      function Navigation() {
+        return (
+          <nav className="py-6 px-4 bg-gray-900 text-white shadow-md flex justify-between items-center">
+            <h2 className="text-2xl font-bold">Taxi Manager 2025</h2>
+            <div className="space-x-4 text-sm md:text-base">
+              <a href="index.html" className="hover:text-blue-400 transition-colors">Home</a>
+              <a href="progression.html" className="hover:text-blue-400 transition-colors">Development Progression</a>
+              <a href="#news" className="hover:text-blue-400 transition-colors">News & Blogs</a>
+              <a href="#about" className="hover:text-blue-400 transition-colors">About</a>
+            </div>
+          </nav>
+        );
+      }
+
+      function Footer() {
+  return (
+    <footer className="py-12 px-4 bg-gray-900 text-white mt-16">
+      <div className="max-w-7xl mx-auto grid grid-cols-1 md:grid-cols-3 gap-8">
+        <div>
+          <h3 className="text-xl font-bold text-blue-400 mb-4">Taxi Manager 2025</h3>
+          <p className="text-gray-300">
+            Taxi Manager 2025 is a feature-rich taxi management simulation game where players build and manage their own taxi company, face challenges, and expand their empire.
+          </p>
+        </div>
+
+        <div>
+          <h3 className="text-xl font-bold text-blue-400 mb-4">Quick Links</h3>
+          <ul>
+            <li className="relative pl-4">
+              <span className="absolute left-0 top-1/2 transform -translate-y-1/2">•</span>
+              <a href="#home" className="text-gray-300 hover:text-blue-400">Home</a>
+            </li>
+            <li className="relative pl-4">
+              <span className="absolute left-0 top-1/2 transform -translate-y-1/2">•</span>
+              <a href="#about" className="text-gray-300 hover:text-blue-400">About</a>
+            </li>
+            <li className="relative pl-4">
+              <span className="absolute left-0 top-1/2 transform -translate-y-1/2">•</span>
+              <a href="#development" className="text-gray-300 hover:text-blue-400">Development Progression</a>
+            </li>
+            <li className="relative pl-4">
+              <span className="absolute left-0 top-1/2 transform -translate-y-1/2">•</span>
+              <a href="#news" className="text-gray-300 hover:text-blue-400">News & Blogs</a>
+            </li>
+          </ul>
+        </div>
+
+        <div>
+          <h3 className="text-xl font-bold text-blue-400 mb-4">Legal</h3>
+          <ul>
+            <li className="relative pl-4">
+              <span className="absolute left-0 top-1/2 transform -translate-y-1/2">•</span>
+              <a href="#terms" className="text-gray-300 hover:text-blue-400">Terms of Service</a>
+            </li>
+            <li className="relative pl-4">
+              <span className="absolute left-0 top-1/2 transform -translate-y-1/2">•</span>
+              <a href="#privacy" className="text-gray-300 hover:text-blue-400">Privacy Policy</a>
+            </li>
+            <li className="relative pl-4">
+              <span className="absolute left-0 top-1/2 transform -translate-y-1/2">•</span>
+              <a href="#sitemap" className="text-gray-300 hover:text-blue-400">Sitemap</a>
+            </li>
+            <li className="relative pl-4">
+              <span className="absolute left-0 top-1/2 transform -translate-y-1/2">•</span>
+              <a href="#accessibility" className="text-gray-300 hover:text-blue-400">Accessibility</a>
+            </li>
+          </ul>
+        </div>
+      </div>
+
+      <div className="text-center text-gray-500 mt-8">
+        <p>&copy; 2025 Taxi Manager. All rights reserved.</p>
+      </div>
+    </footer>
+  );
+}
+
+      function Home() {
+        const [visible, setVisible] = useState(false);
+
+        useEffect(() => {
+          setTimeout(() => setVisible(true), 100);
+        }, []);
+
+        return (
+          <div id="home" className="min-h-screen bg-gradient-to-br from-gray-950 via-gray-900 to-blue-950 relative overflow-x-hidden">
+            <div className="absolute -top-32 -left-32 w-96 h-96 bg-blue-700/30 rounded-full blur-3xl z-0 animate-pulse" />
+            <div className="absolute top-1/2 right-0 w-80 h-80 bg-blue-400/20 rounded-full blur-2xl z-0 animate-pulse" />
+            <Navigation />
+            <main className="relative max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-32 z-10">
+
+              {/* Hero */}
+              <div className={`text-center mb-24 transition-all duration-1000 ${visible ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-8'}`}>
+                <h1 className="text-5xl md:text-7xl font-extrabold mb-8 text-transparent bg-clip-text bg-gradient-to-r from-blue-400 via-blue-300 to-blue-600 animate-gradient-x">
+                  Taxi Manager 2025
+                </h1>
+                <p className="text-xl text-gray-300 max-w-3xl mx-auto mb-12 animate-fade-in">
+                  A modern taxi management simulation game where you build and expand your taxi empire.
+                </p>
+                <div className="flex justify-center space-x-4 animate-fade-in-up">
+                  <a href="#features" className="px-6 py-3 bg-blue-700/80 text-white rounded-lg hover:bg-blue-600 transition-colors duration-200 shadow-lg">
+                    Learn More
+                  </a>
+                  <a href="/progression" className="px-6 py-3 bg-gray-800 text-white rounded-lg hover:bg-gray-700 transition-colors duration-200 shadow-lg">
+                    View Development Progression
+                  </a>
+                </div>
+              </div>
+
+              {/* About */}
+              <section id="about" className="mt-16 max-w-3xl mx-auto bg-gray-900/80 rounded-xl p-8 shadow-lg animate-fade-in-up">
+                <h2 className="text-3xl font-bold text-white mb-4">About Taxi Manager 2025</h2>
+                <p className="text-gray-300 text-lg mb-2">
+                  <strong>Taxi Manager 2025</strong> is a modern, feature-rich simulation game where you build and manage your own taxi company.
+                </p>
+                <p className="text-gray-400">
+                  Whether you're a casual player or a management enthusiast, Taxi Manager 2025 offers deep strategy, customization, and endless replayability.
+                </p>
+              </section>
+
+              {/* Stats */}
+              <section id="features" className="mt-16 max-w-4xl mx-auto bg-gray-900/80 rounded-xl p-8 shadow-lg animate-fade-in-up">
+  <h2 className="text-3xl font-bold text-white mb-6 text-center">Game Stats & Release Info</h2>
+  <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-6">
+    {[
+      ["Q4 2025", "Planned Release Date"],
+      ["975", "Cities You Can Start In"],
+      ["10,000+", "Cities to Expand Into"],
+      ["500+", "Vehicles Available"],
+      ["20", "Factories to Manage"],
+      ["50+", "Research Categories"],
+      ["5", "Game Difficulty Levels"],
+      ["30", "Dynamic Events"]
+    ].map(([headline, sub]) => (
+      <div key={headline} className="bg-gray-800/60 p-6 rounded-2xl flex flex-col items-center">
+        <span className="text-4xl font-bold text-blue-400 mb-2">{headline}</span>
+        <span className="text-gray-300 text-center">{sub}</span>
+      </div>
+    ))}
+  </div>
+</section>
+
+
+              {/* Features Grid */}
+              <div className="grid grid-cols-1 md:grid-cols-3 gap-8 mb-24 mt-24 animate-fade-in-up">
+                {[["Realistic Simulation", "Experience the challenges of running a taxi business."], ["Strategic Management", "Make decisions about routes, pricing, and fleet."], ["Progressive Development", "Watch as the game evolves with new features."]].map(([title, desc]) => (
+                  <div key={title} className="bg-gray-900/60 p-8 rounded-2xl border border-gray-800/50 shadow-xl hover:scale-105 transition-transform duration-300">
+                    <h3 className="text-xl font-semibold text-white mb-4">{title}</h3>
+                    <p className="text-gray-300">{desc}</p>
+                  </div>
+                ))}
+              </div>
+
+              {/* Preview */}
+              <div id="preview" className="mb-24 animate-fade-in-up">
+                <h2 className="text-3xl font-bold text-white mb-8 text-center">Game Preview</h2>
+                <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
+                  {[1, 2].map((_, i) => (
+                    <div key={i} className="bg-gray-900/60 p-4 rounded-2xl border border-gray-800/50 shadow-lg">
+                      <div className="aspect-video bg-gray-800 rounded-lg"></div>
+                    </div>
+                  ))}
+                </div>
+              </div>
+            </main>
+            <Footer />
+          </div>
+        );
+      }
+
+      ReactDOM.createRoot(document.getElementById("root")).render(<Home />);
+    </script>
+  </body>
+</html>
