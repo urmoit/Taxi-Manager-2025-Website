@@ -75,5 +75,21 @@ This project is licensed under the MIT License - see the [LICENSE](LICENSE) file
 
 ---
 
+# 🚖 Global Taxi Manager 2025 - Development Roadmap
+
+Welcome to the development roadmap for **Global Taxi Manager 2025** — a 2D UI-based business simulation where you manage a taxi company across real-world cities.
+
+## 📌 Notes
+
+- Save folder: `C:\Users\USERNAME\AppData\Local\Urmoit Studio\TaxiManager`  
+- Development is in Unity with C#  
+- Primary focus: realism with fun simulation  
+
+🔗 **Trello Board for Tracking Progress:** [Global Taxi Manager 2025 Trello Board](https://trello.com/b/LeQoKt2V/taxi-manager-2025-development-progression)
+
+_This roadmap is a living document and will be updated throughout development._
+
+---
+
 Thank you for checking out the **Taxi Manager 2025 Website**! Stay tuned for updates, and don’t forget to follow us on our social media channels to get the latest game news.
 
